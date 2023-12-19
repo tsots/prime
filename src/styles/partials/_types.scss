@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700&family=Rubik:wght@300;400&display=swap");
+
+p,
+.card__text,
+.section-intro__text {
+  font-family: "Inter", sans-serif;
+  font-size: calc(16 / 16) + rem;
+  line-height: calc(25 / 16) + rem;
+}
+
+footer {
+  a {
+    font-family: "Inter", sans-serif;
+    font-size: calc(14 / 16) + rem;
+    line-height: calc(25 / 16) + rem;
+  }
+}
+
+nav {
+  a {
+    font-family: "Inter", sans-serif;
+    font-size: calc(14 / 16) + rem;
+    line-height: calc(24 / 16) + rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      font-family: "Inter", sans-serif;
+      font-size: calc(14 / 16) + rem;
+      line-height: calc(24 / 16) + rem;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: calc(24 / 16) + rem;
+  line-height: calc(32 / 16) + rem;
+  font-weight: 600;
+}
+
+.card-heading__title,
+.card__title {
+  font-family: "Rubik", sans-serif;
+  font-size: calc(16 / 16) + rem;
+  line-height: calc(32 / 16) + rem;
+  font-weight: 600;
+}

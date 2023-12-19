@@ -1,0 +1,105 @@
+// section {
+//   margin-block: 3rem;
+// }
+
+.section-intro {
+  &__who-are-we {
+    p {
+      padding: 0rem 1rem 3rem;
+    }
+    h2 {
+      padding: 0rem 1rem;
+    }
+  }
+}
+
+.section-intro-leadership {
+  padding: 1rem 1rem;
+}
+
+.section-intro {
+  p,
+  .section-intro__text {
+    font-size: calc(16 / 16) + rem;
+    line-height: calc(25 / 16) + rem;
+  }
+
+  @include mq(md) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      $md-scr
+      minmax(2rem, 1fr);
+  }
+}
+
+.section-intro {
+  display: grid;
+  padding-bottom: 3rem;
+
+  @include mq(md) {
+    &__text,
+    &__title {
+      grid-column: 2/3;
+    }
+  }
+
+  @include mq(lg) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      minmax(0, $lg-scr)
+      minmax(2rem, 1fr);
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+///  SUMMARY SECTION   ///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+.summary {
+  display: grid;
+  grid-template-columns:
+    minmax(1rem, 1fr)
+    minmax(320px, $xs-scr)
+    minmax(1rem, 1fr);
+
+  p {
+    grid-column: 2/3;
+  }
+
+  @include mq(sm) {
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      minmax(320px, $sm-scr)
+      minmax(1rem, 1fr);
+  }
+
+  @include mq(md) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      minmax(320px, $md-scr)
+      minmax(2rem, 1fr);
+  }
+
+  @include mq(lg) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      minmax(320px, $lg-scr)
+      minmax(2rem, 1fr);
+  }
+
+  p {
+    font-size: calc(16 / 16) + rem;
+    line-height: calc(25 / 16) + rem;
+  }
+}
+
+footer {
+  color: #025c0b;
+  a {
+    color: #025c0b;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

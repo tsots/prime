@@ -1,0 +1,28 @@
+.mobile-billboard {
+  display: grid;
+  font-family: "Rubik", sans-serif;
+  padding-block: 3rem 3rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    padding-inline: 1rem;
+    font-size: calc(18 / 16) + rem;
+    line-height: calc(28 / 16) + rem;
+  }
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.mobile-billboard {
+  &.billboard {
+    .image {
+      height: calc(30vh + $height);
+      background-size: 50%;
+    }
+  }
+}

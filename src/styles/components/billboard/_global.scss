@@ -1,0 +1,42 @@
+.billboard {
+  background: url("/bg.svg") no-repeat center center / cover;
+
+  h1 {
+    color: $accent-clr;
+    font-family: "Laila", sans-serif;
+  }
+
+  p {
+    color: $txt-light-clr;
+    // max-width: 60ch;
+    font-size: calc(16 / 16) + rem;
+    line-height: calc(25 / 16) + rem;
+    margin-top: 2rem;
+  }
+}
+
+.mobile-billboard {
+  @include mq(md) {
+    display: none;
+  }
+}
+.desktop-billboard {
+  display: none;
+  @include mq(md) {
+    display: grid;
+  }
+}
+
+.about,
+.services {
+  &.billboard {
+    .container {
+      max-width: $md-scr;
+      margin-inline: auto;
+      padding-top: $height;
+      height: calc(50vh + $height);
+      display: grid;
+      place-items: center;
+    }
+  }
+}

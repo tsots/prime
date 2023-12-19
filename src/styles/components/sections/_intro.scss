@@ -1,0 +1,45 @@
+.section-intro {
+  margin-block: 1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
+  max-width: $sm-scr;
+  margin-inline: auto;
+
+  border-bottom: 0.1rem solid gray;
+
+  @include mq(md) {
+    max-width: $md-scr;
+    padding-inline: 2rem;
+    border: none;
+  }
+
+  @include mq(lg) {
+    max-width: $lg-scr;
+  }
+
+  h2 {
+    padding-block-end: 1rem;
+    text-align: center;
+
+    @include mq(md) {
+      padding-block-end: 2rem;
+      text-align: initial;
+    }
+  }
+}
+
+h2 {
+  padding-block-end: 1rem;
+
+  @include mq(md) {
+    padding-block-end: 2rem;
+  }
+}
+
+.about.introduction {
+  .section-intro {
+    // background-color: green;
+    max-width: 100%;
+    padding-inline: 0;
+  }
+}

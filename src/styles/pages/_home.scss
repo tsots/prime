@@ -1,0 +1,91 @@
+.home {
+  &.billboard .image {
+    background: url("/flower.svg") no-repeat center center;
+    mix-blend-mode: screen;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+section.company-introduction {
+  // margin-top: 5rem;
+
+  .who-we-are {
+    display: grid;
+
+    h2 {
+      display: grid;
+      justify-items: center;
+      padding-block: 2rem;
+    }
+
+    p {
+      padding-block: 0 2rem;
+    }
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.company-introduction {
+  display: grid;
+  row-gap: 2.5rem;
+  .who-we-are,
+  .our-mission {
+    padding-inline: 1rem;
+  }
+
+  .who-we-are {
+    order: 1;
+  }
+
+  .image {
+    order: 2;
+  }
+
+  .our-mission {
+    order: 3;
+  }
+
+  @include mq(md) {
+    .who-we-are,
+    .our-mission {
+      padding-inline: 0rem;
+    }
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      minmax(0, calc($md-scr/2))
+      minmax(0, calc($md-scr/2))
+      minmax(2rem, 1fr);
+
+    .who-we-are {
+      grid-column: 2/4;
+      grid-row: 1/2;
+    }
+
+    .image {
+      grid-column: 3/5;
+      grid-row: 2/3;
+      border-bottom-left-radius: 1.5rem;
+      border-top-left-radius: 1.5rem;
+    }
+
+    .our-mission {
+      grid-column: 2/3;
+      display: grid;
+      place-content: center;
+    }
+  }
+
+  @include mq(lg) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      minmax(0, calc($lg-scr/2))
+      minmax(0, calc($lg-scr/2))
+      minmax(2rem, 1fr);
+
+    .who-we-are {
+      max-width: $lg-scr;
+      margin-inline: auto;
+    }
+  }
+}

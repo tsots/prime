@@ -1,0 +1,56 @@
+$height: 60px;
+
+.desktop-header {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    box-shadow: rgb(68, 68, 68) 0px 1px 10px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+  }
+  nav {
+    max-width: $lg-scr;
+    margin-inline: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+
+    @include mq(md) {
+      padding-inline: 0rem;
+    }
+
+    .logo {
+      padding-block: 0.5rem;
+
+      img {
+        max-width: 160px;
+      }
+    }
+
+    .menu {
+      display: flex;
+      height: $height;
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        padding-inline: 0.8rem;
+        transition: all 600ms ease;
+
+        &:hover {
+          // background-color: #2e3191;
+          color: #2e3191;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

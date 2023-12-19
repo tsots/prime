@@ -1,0 +1,31 @@
+@import "./partials/index.scss";
+@import "./global";
+
+@import "./components/header/index.scss";
+
+@import "./components/billboard/index.scss";
+
+// @import "./components/cards/services-home";
+@import "./components/cards/cards";
+.company-introduction {
+  .image {
+    background: url("/wepik.png") no-repeat top center;
+    width: 100%;
+    height: clamp(350px, 500px, 600px);
+    background-size: cover;
+  }
+}
+
+@import "./components/sections/index.scss";
+@import "./pages/index.scss";
+
+main {
+  z-index: -1;
+  @media screen and (max-width: $md-scr) {
+    padding-top: calc($mobile-header-size);
+  }
+
+  @include mq(md) {
+    padding-top: calc($height);
+  }
+}

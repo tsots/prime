@@ -1,0 +1,44 @@
+.services.mobile-billboard {
+  //   display: grid;
+
+  h1 {
+    text-align: center;
+    // paddin
+    margin-block: 2rem;
+  }
+
+  p {
+    padding-inline: 1rem;
+    padding-block: 2rem;
+
+    font-size: 16px;
+    line-height: calc(16px * 1.6);
+    color: white;
+    font-weight: 400;
+  }
+
+  .image {
+    width: clamp(300px, 449px, 500px);
+    height: 300px;
+    margin-inline: auto;
+    background: url("/flower.svg") no-repeat center center / cover;
+    // background-size: clamp(40%, 50%, 80%);
+    background-size: 80%;
+    // background-size: cover;
+    mix-blend-mode: screen;
+    background-position: top;
+    display: none;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+// .services-page{
+//   &.services{
+
+//     .button
+//   }
+
+// }

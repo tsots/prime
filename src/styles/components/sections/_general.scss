@@ -1,0 +1,21 @@
+section {
+  &:not(:first-of-type) {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  @include mq(lg) {
+    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+section.solar:nth-of-type(odd),
+section.wind:nth-of-type(even),
+section.storage:nth-of-type(even),
+section.hydro:nth-of-type(even),
+section.wiremesh:nth-of-type(even),
+section.utilities:nth-of-type(even) {
+  background-color: whitesmoke;
+}

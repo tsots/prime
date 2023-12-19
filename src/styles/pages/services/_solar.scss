@@ -1,0 +1,54 @@
+.solar {
+  &.mobile-billboard {
+    &.billboard {
+      .image {
+        height: calc(30vh + $height);
+        background: url("/solar-panels.svg") no-repeat center center;
+        background-size: 50%;
+      }
+    }
+  }
+
+  &.desktop-billboard {
+    .container {
+      @include mq(md) {
+        height: calc(50vh + $height);
+        display: grid;
+
+        grid-template-columns:
+          minmax(2rem, 1fr)
+          minmax(0, calc($md-scr/2))
+          minmax(0, calc($md-scr/2))
+          minmax(2rem, 1fr);
+
+        .content {
+          grid-column: 2/3;
+          display: grid;
+          place-content: center;
+        }
+
+        .image {
+          grid-column: 3/-1;
+          background: url("/solar-panels.svg") no-repeat center center;
+          background-size: 50%;
+        }
+      }
+
+      @include mq(lg) {
+        grid-template-columns:
+          minmax(2rem, 1fr)
+          minmax(0, calc($lg-scr/2))
+          minmax(0, calc($lg-scr/2))
+          minmax(2rem, 1fr);
+      }
+    }
+  }
+}
+
+.one.solar {
+  .section-intro {
+  }
+
+  .section-cards {
+  }
+}
